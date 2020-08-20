@@ -1,0 +1,11 @@
+.social-icons {
+    svg {
+        max-height: 24px;
+        max-width: 24px;
+        @apply h-auto w-full;
+    }
+}
+
+.social-icons__bg {
+    @apply bg-gray-300;
+}

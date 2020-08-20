@@ -1,0 +1,25 @@
+.navigation__button {
+    span {
+        background-color: $override_color_text_primary;
+    }
+
+    &--active {
+        span {
+            background-color: white;
+        }
+    }
+}
+
+
+
+.navigation__links {
+    li {
+        a:hover::after {
+            background-color: $override_color_primary;
+        }
+    }
+}
+
+.navigation__overlay {
+    background-color: $override_color_background;
+}

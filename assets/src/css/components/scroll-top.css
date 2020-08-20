@@ -1,0 +1,11 @@
+.scroll-to-top-btn {
+    bottom: 20px;
+    right: 30px;
+    transition: all .3s ease-in;
+    z-index: 1;
+    @apply bg-gray-300 cursor-pointer fixed opacity-0 outline-none p-3 rounded-sm shadow-lg text-white;
+  }
+  
+.scroll-to-top-btn:hover {
+    @apply bg-primary;
+}

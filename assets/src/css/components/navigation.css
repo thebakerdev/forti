@@ -1,0 +1,127 @@
+.navigation {
+    @apply flex items-center justify-between py-6;
+}
+
+.navigation__button {
+    height: 30px;
+    width: 35px;
+    @apply cursor-pointer outline-none relative;
+    
+    &:focus,
+    &:active {
+        @apply outline-none;
+    }
+    
+    span {
+        height: 4px;
+        transition: all .2s ease-in;
+        width: 23px;
+        @apply absolute block bg-gray-300 right-0;
+    }
+    
+    span:first-child {
+        transform-origin: left top;
+        @apply top-0;
+    }
+
+    span:nth-child(2) {
+        top: 10px;
+        width: 32px;
+    }
+
+    span:last-child {
+        top: 20px;
+        transform-origin: left bottom;
+        width: 25px;
+    }
+
+    &:hover {
+        span:nth-child(2) {
+            width: 16px;
+        }
+    
+    }
+
+    &--active {
+        z-index: 2;
+        span {
+            @apply bg-white;
+        }
+
+        span:first-child {
+            right: -3px;
+            top: -4px;
+            transform: rotate(45deg);
+        }
+
+        span:nth-child(2) {
+            top: 11;
+            transform: translateX(-6px);
+        }
+
+        span:last-child {
+            right: -4px;
+            top: 27px;
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            span:nth-child(2) {
+                width: 32px;
+            }
+        
+        }
+    }
+}
+
+.navigation__links {
+    left: 50%;
+    pointer-events: none;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .1s ease-out;
+    z-index: -1;
+    @apply opacity-0;
+
+    @apply fixed;
+    
+    li {
+        @apply p-1 text-center text-white text-2xl;
+
+        a {
+            top: -10px;
+            transition-delay: 0;
+            @apply inline-block opacity-0 relative;
+        }
+
+        a:hover::after {
+            bottom: 10px;
+            content: '';
+            height: 6px;
+            z-index: -1;
+            @apply absolute bg-primary block left-0 w-full;
+        }
+    }
+
+
+    &--active {
+        pointer-events:all;
+        z-index: 2;
+        @apply opacity-100;
+
+        li a {
+            @apply opacity-100 top-0;
+            transition: all .4s ease-out;
+        }
+    }
+}
+
+.navigation__overlay {
+    z-index: 1;
+    transition: all .6s ease-out;
+    @apply fixed bg-gray-300;
+
+    &--active {
+        @apply bottom-0 h-full left-0 opacity-100 right-0 top-0 w-full;
+    }
+}

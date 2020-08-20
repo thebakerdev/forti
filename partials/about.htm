@@ -1,0 +1,20 @@
+<section id="about" class="about section container mx-auto">
+    <div class="flex">
+        <div class="w-full md:w-10/12 mx-auto">
+            <div class="relative">
+                <img class="about__image mx-auto md:mx-0" src="{{ this.theme.about_image ? this.theme.about_image|media : 'assets/dist/images/about.jpg'|theme }}" alt="About">
+                <div class="about__content bg-white shadow-lg rounded-sm border border-gray-100">
+                    <h3 class="section__heading text-xl mt-8 md:mt-0 mb-4 md:ml-16 md:w-1/2">{{ this.theme.about_heading }}</h3>
+                    <div>
+                        {% if this.theme.about_content %}
+                            {{ this.theme.about_content|raw }}
+                        {% else %}
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos voluptatum, ut doloremque corrupti asperiores deserunt esse repellat quaerat eaque nulla repellendus officia, a autem voluptates? Qui eaque excepturi est dolorum!</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolor nulla deserunt culpa consectetur eligendi cum maiores, suscipit laudantium possimus dolorum, odit sed distinctio adipisci?</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

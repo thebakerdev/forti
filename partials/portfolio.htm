@@ -1,0 +1,20 @@
+<section id="portfolio" class="portfolio section col container mx-auto text-center">
+    <div class="col w-full md:w-1/2 mx-auto">
+        <h3 class="section__heading mx-auto mb-4">{{ this.theme.portfolio_heading }}</h3>
+        <p class="mb-16">{{ this.theme.portfolio_description }}</p>
+    </div> 
+    <div class="w-full mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-4">
+            {% if this.theme.portfolio_items|length > 0 %}
+                {% for portfolio_item in this.theme.portfolio_items %}
+                    {% partial 'portfolio-item' portfolio=portfolio_item %}
+                {% endfor %}
+            {% else %}
+                {% for i in 1..8 %}
+                    {% partial 'portfolio-item' portfolio="" %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        
+    </div>
+</section>

@@ -1,0 +1,17 @@
+/* Button Override */
+.btn {
+    
+    background-color: $override_color_default;
+
+    &:hover {
+        background-color: darken($override_color_default,10%);
+    }
+
+    &--primary {
+        background-color: $override_color_primary;
+    }
+
+    &--primary:hover {
+        background-color: darken($override_color_primary, 10%);
+    }
+}

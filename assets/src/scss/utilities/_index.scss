@@ -1,0 +1,5 @@
+.section__heading {
+    &::before {
+        background-color: $override_color_primary;
+    }
+}

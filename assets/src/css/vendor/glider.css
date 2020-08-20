@@ -1,0 +1,25 @@
+@import "glider-js/glider.css";
+
+.glider {
+    overflow: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        height: 0 !important;
+    }
+}
+
+.glider-dot:hover, 
+.glider-dot:focus, 
+.glider-dot.active {
+    outline: none !important;
+    @apply bg-secondary;
+}
+
+
+.glider-prev:hover, 
+.glider-next:hover, 
+.glider-prev:focus, 
+.glider-next:focus {
+    @apply text-secondary;
+}

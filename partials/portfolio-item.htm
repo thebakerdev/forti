@@ -1,0 +1,55 @@
+<div class="portfolio-item">
+    <div class="portfolio-item__thumbnail">
+        <div class="portfolio-item__thumbnail-overlay">
+            <div class="portfolio-item__thumbnail-content">
+                <h4 class="portfolio-item__thumbnail-title">{{ portfolio.title ? portfolio.title : 'Project Title' }}</h4>
+                <p class="portfolio-item__thumbnail-subtitle">{{ portfolio.company ? portfolio.company : 'Company'  }}</p>
+                <a href="{{ portfolio.website_url ? portfolio.website_url : 'https://www.websiteurl.com' }}" target="_blank" rel="noreferrer" aria-label="portfolio link"><i class="icofont-link icofont-lg"></i></a>    
+            </div>
+            <button class="portfolio-item__thumbnail-button" aria-label="show portfolio button">
+                <i class="icofont-long-arrow-right icofont-2x ml-1"></i>
+            </button>
+        </div>
+        <img src="{{ portfolio.thumbnail_image ? portfolio.thumbnail_image|media : 'assets/dist/images/portfolio-item.jpg'|theme }}" alt="Portfolio Image">
+    </div>
+    <div class="portfolio-item__details">
+        <button type="button" class="portfolio-item__details-back-button" aria-label="close portfolio button">
+            <i class="icofont-long-arrow-left icofont-3x"></i>
+        </button>
+        <div class="portfolio-item__details-content">
+            <div class="portfolio-item__details-img">
+                <div>
+                    <div class="portfolio-item__details-heading-wrap">
+                        <h4 class="font-bold text-2xl md:text-4xl">{{ portfolio.title ? portfolio.title : 'Project Title' }}</h4>
+                        <a class="text-gray-200" href="{{ portfolio.website_url ? portfolio.website_url : 'https://www.websiteurl.com' }}" target="_blank" rel="noreferrer">{{ portfolio.website_url ? portfolio.website_url : 'https://www.websiteurl.com' }}</a>
+                    </div>
+                    <div class="portfolio-item__details-img-bg"></div>
+                    <img src="{{ portfolio.full_image ? portfolio.full_image|media : 'assets/dist/images/portfolio-item-full.jpg'|theme }}" alt="Portfolio Primary Image" class="w-full">
+                </div>
+            </div>
+            <div class="portfolio-item__details-text">
+                <h4 class="font-bold font-primary mb-4 mt-8 text-xl fade-up">{{ portfolio.portfolio_heading ? portfolio.portfolio_heading : 'Project Overview' }}</h4>
+                <div class="fade-up">
+                    {% if portfolio.portfolio_details %}
+                        {{ portfolio.portfolio_details|raw }}
+                    {% else %}
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolorem modi excepturi eveniet perferendis. Hic commodi distinctio eius odio in?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae ipsam sunt rem vero facere accusamus voluptatem quisquam? Adipisci dignissimos cupiditate repellat qui minus veniam illo repellendus ipsum debitis nam, sunt ad ipsam quos reprehenderit commodi quod. Nulla quibusdam magnam quas!</p>
+                    {% endif %}
+                </div>
+                <h5 class="font-bold font-primary mb-4 mt-6 text-xl fade-up">{{ portfolio.list_title ? portfolio.list_title : 'Tech Stack' }}</h5>
+                <ul class="fade-up">
+                    {% if portfolio.list_items|length > 0 %}
+                        {% for list_item in portfolio.list_items|split(',') %}
+                            <li>- {{ list_item }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li>- OctoberCMS</li>
+                        <li>- Vue</li>
+                        <li>- Sass</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

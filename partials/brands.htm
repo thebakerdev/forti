@@ -1,0 +1,23 @@
+<section id="brands" class="brands section section-ntm container mx-auto">
+    <div class="flex flex-col md:flex-row">
+        <div class="col w-full md:w-5/12 text-center md:text-left mb-8">
+            <h3 class="section__heading text-2xl mb-4 md:ml-16 md:w-1/2">{{ this.theme.brands_heading }}</h3>
+            <p>{{ this.theme.brands_description }}</p>
+        </div>
+        <div class="col flex w-full md:w-5/12 mx-auto items-start">
+            {% if this.theme.brand_items|length > 0 %}
+                <ul class="flex flex-wrap justify-center mx-auto">
+                    {% for brand_item in this.theme.brand_items %}
+                        <li><a href="{{ brand_item.website_url }}" target="_blank" rel="noreferrer"><img src="{{ brand_item.logo|media }}" alt="{{ brand_item.name }}"></a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <ul class="flex flex-wrap justify-center mx-auto">
+                    {% for i in 1..5 %}
+                        <li><a href="https://www.websiteurl.com" target="_blank" rel="noreferrer"><img src="{{ 'assets/dist/images/brand-logo.jpg'|theme }}" alt="Brand logo"></a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>

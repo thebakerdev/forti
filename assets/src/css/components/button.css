@@ -1,0 +1,24 @@
+.btn {
+    transition: background .2s ease-in;
+    @apply bg-gray-100 inline-flex leading-snug outline-none px-6 py-3 rounded-sm shadow text-gray-300;
+
+    &:focus {
+        @apply outline-none;
+    }
+
+    &:hover {
+        background-color: color(theme('colors.gray.100') shade(10%));
+    }
+
+    &--primary {
+        @apply bg-primary text-white;
+    }
+
+    &--primary:hover {
+        background-color: color(theme('colors.primary') shade(20%));
+    }
+
+    &--full {
+        @apply block w-full;
+    }
+}

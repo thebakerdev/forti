@@ -1,0 +1,53 @@
+/* Utilities */
+
+.col {
+    @apply px-4;
+}
+
+.section {
+    @apply py-32;
+}
+
+.section__heading {
+    @apply relative inline-block;
+    
+    &::before {
+        content: '';
+        height: 4px;
+        left: 50%;
+        top: -20px;
+        transform: translateX(-50%);
+        width: 54px;
+        @apply absolute block bg-primary;
+    }
+}
+
+/* Offsets top padding of section on mobile*/
+.section-ntm {
+    @apply -mt-32;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(180deg, rgba(67, 132, 230, 0.03) 0%, rgba(67, 132, 230, 0) 100%);
+}
+
+.bg-gradient-gray {
+    background: linear-gradient(180deg, rgba(247, 247, 247, 0.5) 0%, rgba(247, 247, 247, 0) 100%);
+}
+
+@screen md {
+    .section-ntm {
+        @apply mt-0;
+    }
+
+    .section__heading {
+        @apply inline-block relative;
+        
+        &::before {
+            left: -64px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+

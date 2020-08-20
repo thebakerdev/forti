@@ -1,0 +1,5 @@
+.form-group {
+    label {
+        @apply block mb-2 text-sm;
+    }
+}

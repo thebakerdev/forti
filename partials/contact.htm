@@ -1,0 +1,23 @@
+<section id="contact" class="contact section container mx-auto">
+    <div class="flex">
+        <div class="col w-full md:w-6/12 mx-auto text-center">
+            <h4 class="section__heading text-2xl  mx-auto mb-4">{{ this.theme.contact_heading ? this.theme.contact_heading : 'Send me a message'}}</h4>
+            <p class="mb-16">{{ this.theme.contact_description ? this.theme.contact_description : 'acon ipsum dolor amet fatback pork chop chicken tenderloin sirloin meatball filet mignon buffalo ball tip porchetta bresaola'}}</p>
+            <form id="contact-form" action="#" class="text-left shadow-lg border border-gray-100 px-8 py-12" novalidate>
+                <div class="form-group mb-6">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" class="input" name="name">
+                </div>
+                <div class="form-group mb-6">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="input" name="email">
+                </div>
+                <div class="form-group mb-8">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="input h-32" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn btn--primary btn--full">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>

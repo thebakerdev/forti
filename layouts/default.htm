@@ -1,0 +1,15 @@
+description = "Default layout"
+==
+<!doctype html>
+<html lang="en">
+<head>
+    {% partial 'meta' %}
+</head>
+<body class="overflow-x-hidden">
+    <h1 class="hidden"></h1>
+    <div id="app" class="site-wrapper">
+        {% page %}
+    </div>
+    {% partial 'scripts' %}
+</body>
+</html>

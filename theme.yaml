@@ -1,0 +1,7 @@
+name: Forti
+description: 'A minimalist One-Page template built with TailwindCSS. The template is best suited for freelance portfolio or small agencies to showcase their work and services.'
+previewImage: 'assets/dist/images/preview.jpg'
+author: 'The Bakerdev'
+homepage: 'http://octobercms.com'
+code: ''
+form: fields.yaml

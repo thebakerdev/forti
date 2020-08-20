@@ -1,0 +1,7 @@
+.hero__subheading {
+    span {
+        &::before {
+            background-color: $override_color_primary;
+        }
+    }
+}

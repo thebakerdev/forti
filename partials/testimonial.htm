@@ -1,0 +1,12 @@
+<div class="testimonial">
+    <img class="w-24 h-24 mx-auto mb-12 rounded-full" src="{{ testimonial.image ? testimonial.image|media : 'assets/dist/images/testimonial-image.jpg'|theme }}" alt="Face">
+    <em class="italic text-lg inline-block mb-4">
+        {% if testimonial.comment %}
+            {{ testimonial.comment }}
+        {% else %}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non eum asperiores labore laborum pariatur molestias et impedit. A, fugit suscipit consectetur optio, tempora ipsa soluta cumque alias quidem debitis aliquam.
+        {% endif %}
+    </em>
+    <h4 class="font-primary uppercase text-base font-bold mb-2">- {{ testimonial.name ? testimonial.name : 'John Doe' }}</h4>
+    <p class="text-sm text-gray-200">{{ testimonial.company ? testimonial.company : 'Company Name' }}</p>
+</div>

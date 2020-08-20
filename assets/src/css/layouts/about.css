@@ -1,0 +1,20 @@
+.about__content {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    @apply absolute p-8 w-10/12;
+}
+
+@screen md {
+    .about__content {
+        @apply absolute p-8 w-10/12;
+    }
+}
+
+@screen lg {
+
+    .about__content {
+        left: 60%;
+        @apply absolute p-8 w-7/12;
+    }
+}

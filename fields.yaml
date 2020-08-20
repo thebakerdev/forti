@@ -1,0 +1,359 @@
+tabs:
+    fields:
+        #TAB: BASIC INFO TAB
+        website_name:
+            tab: Basic Info
+            label: Website Name 
+            type: text 
+            default: Website Name 
+        website_author:
+            tab: Basic Info 
+            label: Author 
+            type: text 
+            default: The Bakerdev
+        website_url:
+            tab: Basic Info 
+            label: Website Url 
+            type: text 
+            default: https://www.website.com
+        description:
+            tab: Basic Info 
+            label: Description 
+            type: text 
+            default: This is your website description 
+        contact_email:
+            tab: Basic Info 
+            label: Contact Email 
+            type: text
+            default: contact@email.com
+        keywords:
+            tab: Basic Info
+            label: Keywords
+            type: taglist
+            separator: comma
+            default: october,octobercms,themes,templates,free octobercms themes
+            options:
+            - october
+            - octobercms
+            - themes
+            - templates
+            - free octobercms themes
+        logo_header:
+            tab: Basic Info
+            label: Logo Header
+            type: mediafinder
+            mode: image
+            span: left
+        logo_footer:
+            tab: Basic Info
+            label: Logo Footer
+            type: mediafinder
+            mode: image
+            span: right
+        #TAB: THEME COLORS 
+        override_color: 
+            tab: Theme Colors
+            label: Override default theme colors
+            type: switch
+            options:
+                on: true
+                off: false
+        override_color_primary:
+            tab: Theme Colors
+            label: Primary 
+            type: colorpicker
+            availableColors: ["#306ecc","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#306ecc"
+            assetVar: "override-color-primary"
+        override_color_secondary:
+            tab: Theme Colors
+            label: Secondary 
+            type: colorpicker
+            availableColors: ["#3DBCFC","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#3DBCFC"
+            assetVar: "override-color-secondary"
+        override_color_tertiary:
+            tab: Theme Colors
+            label: Tertiary 
+            type: colorpicker
+            availableColors: ["#27AE60","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#27AE60"
+            assetVar: "override-color-tertiary"
+        override_color_quaternary:
+            tab: Theme Colors
+            label: Quaternary 
+            type: colorpicker
+            availableColors: ["#e74c3c","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#e74c3c"
+            assetVar: "override-color-quaternary"
+        override_color_default:
+            tab: Theme Colors
+            label: Default
+            type: colorpicker
+            availableColors: ["#F6F6F6","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#F6F6F6"
+            assetVar: "override-color-default"
+        override_color_text_primary:
+            tab: Theme Colors
+            label: Text Primary 
+            type: colorpicker
+            availableColors: ["#343333","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#343333"
+            assetVar: "override-color-text-primary"
+        override_color_background:
+            tab: Theme Colors
+            label: Background
+            type: colorpicker
+            availableColors: ["#343333","#FC8181","#F6AD55","#F6E05E","#68D391","#4FD1C5","#63B3ED","#7F9CF5","#B794F4","#F687B3"]
+            default: "#343333"
+            assetVar: "override-color-background"
+        #TAB: HERO 
+        hero_heading:
+            tab: Hero 
+            label: Heading 
+            type: text 
+            default: Hi! I'm John Doe 
+        hero_subheading:
+            tab: Hero 
+            label: Heading 
+            type: text 
+            default: <span>Fullstack</span> Web Developer 
+        hero_description:
+            tab: Hero 
+            label: Description 
+            default: Hamburger meatloaf tenderloin pork chop, chuck tail cow shank bacon spare ribs picanha venison.
+        hero_primary_button_text:
+            tab: Hero 
+            label: Primary Button Text 
+            default: See My Work 
+        hero_primary_button_url:
+            tab: Hero 
+            label: Primary Button URL
+            default: "#portfolio"
+        hero_secondary_button_text:
+            tab: Hero 
+            label: Secondary Button Text 
+            default: Contact Me 
+        hero_secondary_button_url:
+            tab: Hero 
+            label: Secondary Button URL
+            default: "#contact"
+        hero_image:
+            tab: Hero
+            label: Hero Image
+            type: mediafinder
+            mode: image
+            commentAbove: 485x346
+        hero_show_social_media:
+            tab: Hero 
+            label: Show Social Media Icons
+            type: switch
+            default: 1
+            options:
+                on: enabled 
+                off: disabled 
+        #TAB: PORTFOLIO
+        portfolio_heading:
+            tab: Portfolio 
+            label: Heading 
+            type: text 
+            default: Portfolio 
+        portfolio_description:
+            tab: Portfolio 
+            label: Description 
+            type: text 
+            default: Chuck pancetta ham hock, ribeye jerky prosciutto strip steak beef ribs tenderloin shoulder rump ham landjaeger.
+        portfolio_items:
+            tab: Portfolio 
+            label: Portfolio Item 
+            titleFrom: title 
+            prompt: Add new portfolio 
+            type: repeater 
+            form:
+                fields:
+                    title:
+                        label: Title 
+                        type: text 
+                    company:
+                        label: Company 
+                        type: text 
+                    website_url:
+                        label: Website URL 
+                        type: text
+                    portfolio_heading:
+                        label: Heading 
+                        type: text 
+                        default: Project Overview
+                    portfolio_details:
+                        label: Details 
+                        type: richeditor
+                    list_title:
+                        label: List Title 
+                        type: text 
+                        default: Tech Stack
+                    list_items:
+                        label: List Items
+                        type: taglist
+                        separator: comma
+                        default: HTML, CSS, Javascript
+                    thumbnail_image:
+                        label: Thumbnail Image
+                        type: mediafinder
+                        mode: image
+                        span: left
+                        commentAbove: 280x265
+                    full_image:
+                        label: Full Image
+                        type: mediafinder
+                        mode: image
+                        span: right
+                        commentAbove: 525x375
+        #TAB: BRANDS
+        brands_heading:
+            tab: Brands 
+            label: Heading 
+            type: text
+            default: Brands I've worked with 
+        brands_description:
+            tab: Brands 
+            label: Description 
+            type: text
+            default: Ribeye corned beef buffalo doner flank, kielbasa spare ribs pork loin tri-tip rump capicola hamburger chicken shankle.
+        brand_items:
+            tab: Brands 
+            label: Brand Item 
+            titleFrom: name 
+            prompt: Add new brand 
+            type: repeater 
+            form:
+                fields:
+                    name:
+                        label: Name 
+                    website_url:
+                        label: Website URL 
+                    logo:
+                        label: Brand Logo
+                        type: mediafinder
+                        mode: image
+                        commentAbove: 150x60
+        #TAB: TESTIMONIALS
+        testimonials_heading:
+            tab: Testimonial
+            label: Title 
+            type: text
+            default: What our customers are saying
+        testimonials:
+            tab: Testimonial
+            label: Testimonials 
+            titleFrom: name
+            prompt: Add new testimonial
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Name
+                        type: text
+                        span: left
+                    company:
+                        label: Company
+                        type: text
+                        span: right
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        span: left
+                    comment:
+                        label: Comment
+                        type: textarea
+                        span: right
+        #TAB: ABOUT
+        about_heading:
+            tab: About 
+            label: About
+            type: text
+            default: About 
+        about_content:
+            tab: About 
+            label: Content 
+            type: richeditor 
+            default:  Pork loin corned beef ham hock, pork belly pig meatball tenderloin chislic ribeye pork kielbasa pancetta ham tongue.
+        about_image:
+            tab: About 
+            label: Image
+            type: mediafinder
+            mode: image
+            commentAbove: 415x500   
+        #TAB: SERVICES
+        services_heading:
+            tab: Services 
+            label: Heading 
+            type: text 
+            default: Services
+        services_description:
+            tab: Services 
+            label: Description 
+            type: text 
+            default: Boudin doner tongue jowl kevin, hamburger bacon beef pig. Pork chuck bresaola, burgdoggen fatback meatloaf landjaeger buffalo kielbasa ball tip strip steak ham drumstick.
+        services:
+            tab: Services
+            label: Services 
+            titleFrom: title
+            prompt: Add new service
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Title
+                        type: text
+                    description:
+                        label: Description 
+                        type: text 
+                    price:
+                        label: Price 
+                        type: text
+                    features:
+                        label: Features
+                        type: taglist
+                    button_text:
+                        label: Button Text
+                        type: text
+                        default: Contact Me
+                        span: left 
+                    button_url:
+                        label: Button URL
+                        type: text
+                        default: "#contact"
+                        span: right
+        #TAB: CONTACT
+        contact_heading:
+            tab: Contact 
+            label: Heading 
+            type: text
+            default: Send me a message
+        contact_description:
+            tab: Contact 
+            label: Description 
+            type: text
+            default: acon ipsum dolor amet fatback pork chop chicken tenderloin sirloin meatball filet mignon buffalo ball tip porchetta bresaola
+        #TAB: SOCIAL 
+        social_facebook:
+            tab: Social 
+            label: Facebook URL
+            type: text
+            default: https://www.facebook.com/ 
+        social_twitter:
+            tab: Social 
+            label: Twitter URL
+            type: text 
+            default: https://www.twitter.com/  
+        social_linkedin:
+            tab: Social 
+            label: Linkedin URL
+            type: text
+            default: https://www.linkedin.com/
+        social_instagram:
+            tab: Social 
+            label: Instagram URL
+            type: text   
+            default: https://www.instagram.com/             

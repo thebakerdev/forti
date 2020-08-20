@@ -1,0 +1,38 @@
+<header id="header" class="container mx-auto">
+    <nav class="navigation col navigation--primary">
+        <div class="logo">
+            <a href="/">
+                <img src="{{ this.theme.logo_header ? this.theme.logo_header|media : 'assets/dist/images/logo-dark.svg'|theme  }}" alt="Logo"> 
+            </a>
+        </div>
+        <div class="navigation__links-wrap">
+            <button class="navigation__button" aria-label="mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="navigation__links">
+                <li>
+                    <a href="#portfolio" class="js-trigger">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#brands" class="js-trigger" style="transition-delay: 0.1s;">Brands</a>
+                </li>
+                <li>
+                    <a href="#testimonials" class="js-trigger" data-mt-tolerance="-50" style="transition-delay: 0.2s;">Testimonials</a>
+                </li>
+                <li>
+                    <a href="#about" class="js-trigger" data-mt-tolerance="-50" style="transition-delay: 0.3s;">About</a>
+                </li>
+                <li>
+                    <a href="#services" class="js-trigger" data-mt-tolerance="-50" style="transition-delay: 0.4s;">Services</a>
+                </li>
+                <li>
+                    <a href="#contact" class="js-trigger" data-mt-tolerance="-80" style="transition-delay: 0.5s;">Contact</a>
+                </li>
+            </ul>
+            <div class="navigation__overlay"></div>
+            <a href="#header" title="Go to top" class="scroll-to-top-btn js-trigger"><i class="icofont-long-arrow-up icofont-lg"></i></a>
+        </div>
+    </nav>
+</header>
