@@ -1,7 +1,7 @@
 {
   "name": "forti-theme",
   "version": "1.0.0",
-  "description": "A minimalist One-Page template built with TailwindCSS. The template is best suited for freelance portfolio or small agencies to showcase their work and services.",
+  "description": "The template is best suited for freelancers or small agencies to showcase their work and services.",
   "main": "index.js",
   "scripts": {
     "dev": "npm run development",

@@ -21,7 +21,7 @@ mix.setPublicPath('./')
         processCssUrls: false
     })
     .browserSync({
-        proxy: 'http://octothemes.oo:96/', //replace with your url
+        proxy: '/', //replace with your url
         files: [
             './layouts/**/*.htm',
             './pages/**/*.htm',

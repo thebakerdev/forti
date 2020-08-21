@@ -4,6 +4,22 @@ layout = "default"
 meta_title = "Website Title"
 meta_description = "Meta Desription"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[genericForm]
+rules[name] = "required"
+rules[message] = "required"
+rules[email] = "required|email"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+emails_date_format = "Y-m-d"
 ==
 {% partial 'header' %}
 
