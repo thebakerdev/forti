@@ -55,10 +55,8 @@
 
 /* Portfolio Details */
 .portfolio-item__details {
-    width: calc(100vw + 34px);
-   /* // width: 100%; */
     z-index: -1;
-    @apply bg-white fixed h-full left-0 opacity-0 overflow-auto top-0;
+    @apply bg-white fixed h-full left-0 opacity-0 overflow-auto top-0 w-full;
 }
 
 .portfolio-item__details-back-button {
@@ -100,6 +98,10 @@
 }
 
 @screen md {
+
+    .portfolio-item__details {
+        width: calc(100vw + 34px);
+    }
 
     .portfolio-item__details-back-button {
         left: 20px;
