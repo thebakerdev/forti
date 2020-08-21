@@ -6,7 +6,7 @@ module.exports = {
             'partials/**/*.htm'
         ],
         options: {
-            whitelist: ['overflow-hidden'],
+            whitelist: ['overflow-hidden','text-quaternary'],
         }
     },
     theme: {
