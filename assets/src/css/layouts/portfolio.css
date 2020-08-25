@@ -34,7 +34,7 @@
 }
 
 .portfolio-item__thumbnail-title {
-    @apply font-primary mb-1 text-lg uppercase;
+    @apply font-primary leading-normal mb-2 text-lg uppercase;
 }
 
 .portfolio-item__thumbnail-subtitle {
